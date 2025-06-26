@@ -1,0 +1,21 @@
+# Project Structure: netmon01
+
+.
+├── docs
+│   ├── logs_20250625-145319.txt
+│   ├── logs_20250625-151618.txt
+│   ├── notes.md
+│   ├── screenshots
+│   └── structure.txt
+├── main.py
+├── README.md
+└── venv
+    ├── bin
+    ├── etc
+    ├── include
+    ├── lib
+    ├── lib64 -> lib
+    ├── pyvenv.cfg
+    └── share
+
+10 directories, 7 files
