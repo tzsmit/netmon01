@@ -2,6 +2,7 @@
 
 import pyshark
 import datetime
+import os
 
 # Set the interface — use 'ip a' to confirm yours (eth0 or wlan0)
 INTERFACE = 'eth0'
@@ -13,9 +14,11 @@ capture = pyshark.LiveCapture(interface=INTERFACE)
 
 # Open log file
 timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-log_file = f"logs_{timestamp}.txt"
+log_filename = f"logs_{timestamp}.txt"
+log_path = os.path.join("docs", log_filename)
 
-with open(log_file, "w") as log:
+with open(log_path, "w") as log:
+
     for packet in capture.sniff_continuously(packet_count=PACKET_LIMIT):
         try:
             src = packet.ip.src
@@ -37,4 +40,4 @@ with open(log_file, "w") as log:
         except AttributeError:
             continue
 
-print(f"[*] Capture complete. Logs saved to {log_file}")
+print(f"[*] Capture complete. Logs saved to {log_path}")
