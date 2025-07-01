@@ -1,58 +1,66 @@
 # 🛡️ netmon01 – Home Network Threat Monitor
 
 ## 📘 Project Overview
-`netmon01` is a Python-based script that captures live network traffic and detects basic suspicious activity. It uses the `pyshark` library to interface with Wireshark's TShark engine, printing and logging traffic in real-time. This is the first project in my Cloud + Industrial Cybersecurity portfolio, designed to build practical, defensive security skills.
+
+`netmon01` is a lightweight, Python-based network monitoring tool that captures and logs live traffic using the `pyshark` wrapper for Wireshark's TShark engine. It’s designed for learning packet analysis and threat detection on local networks. This is the first project in my **Cloud + Industrial Cybersecurity** portfolio, focused on developing real-world, defensive security skills.
+
+---
 
 ## 🔧 Tools & Technologies
-- Python 3
-- PyShark (TShark wrapper)
-- Wireshark & TShark
-- Linux (Kali)
-- Virtual Environment (venv)
-- Log-based detection logic
 
-### 📸 Screenshots
+- **Python 3**
+- **PyShark** (TShark wrapper)
+- **Wireshark & TShark**
+- **Kali Linux**
+- **Virtual Environment (venv)**
+- **Log-based detection logic**
+- **Streamlit** (dashboard visualization)
 
-**Packet Capture Output:**
-![Terminal](docs/screenshots/netmon01_capture.png)
-
-**Streamlit Log Viewer:**
-![Streamlit](docs/screenshots/Screenshot from 2025-07-01 12-02-28.png)
+---
 
 ## 🎯 Learning Objectives
-- Learn to sniff live network packets using Python
-- Identify suspicious activity such as Telnet usage (port 23)
-- Log traffic to a timestamped log file
-- Work inside isolated Python environments for safe, portable development
 
-- Packet analysis  
-- Python scripting  
-- Logging and documentation  
-- Building infosec tools from scratch
+- Capture and inspect live packets using Python
+- Log source/destination IP, protocol, and layer data
+- Flag insecure Telnet traffic (port 23) in logs
+- Maintain clean logs with timestamps
+- Operate entirely in isolated environments
+- Prepare for integration into cloud or ICS/OT security toolkits
 
 ---
 
 ## 🛠️ Features
 
-- 📡 **Live packet capture** using `pyshark.LiveCapture`
-- **Logs traffic details**: source IP, destination IP, protocol
-- **Flags Telnet (port 23)** usage as insecure
-- 🧾 Output saved to log file with timestamp
-- 🔄 Built for continuous improvement (alert logic, CLI filters, DNS parsing)
+- 📡 **Real-time Packet Capture** with `pyshark.LiveCapture`
+- 🧾 **Traffic Logging**: Saves traffic to timestamped log files
+- 🚨 **Basic Alerting**: Flags Telnet traffic (port 23) for review
+- 🧰 **Portable Setup**: Uses Python virtual environments
+- 📊 **Visual Viewer**: Streamlit dashboard to browse and inspect logs
+
+---
+
+## 📸 Screenshots
+
+**Packet Capture Output:**
+![Terminal](docs/screenshots/netmon01_capture.png)
+
+**Streamlit Log Viewer:**
+![Streamlit](docs/screenshots/Screenshot%20from%202025-07-01%2012-02-28.png)
 
 ---
 
 ## 📦 Requirements
 
 - Python 3.10+
-- Kali Linux or Linux distro (for capture privileges)
-- Wireshark / TShark installed
-- Virtual environment (recommended)
+- Kali Linux (or any Linux distro with TShark access)
+- Wireshark & TShark
+- `venv` for isolated Python environments
 
-### Install Dependencies
+---
 
+## 🚀 Setup Instructions
+
+### Clone & Initialize
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install pyshark streamlit
-## Project Structure
+git clone https://github.com/tzsmit/netmon01.git
+cd netmon01
