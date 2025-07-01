@@ -1,3 +1,4 @@
+
 # 🛡️ netmon01 – Home Network Threat Monitor
 
 ## 📘 Project Overview
@@ -53,14 +54,82 @@
 
 - Python 3.10+
 - Kali Linux (or any Linux distro with TShark access)
-- Wireshark & TShark
+- Wireshark & TShark installed
 - `venv` for isolated Python environments
 
 ---
 
 ## 🚀 Setup Instructions
 
-### Clone & Initialize
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/tzsmit/netmon01.git
 cd netmon01
+```
+
+### 2. Set Up Virtual Environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+# or if missing:
+pip install pyshark streamlit
+```
+
+### 4. Run the Packet Capture Tool
+
+```bash
+sudo python3 main.py
+```
+
+### 5. View Logs with Streamlit Dashboard
+
+```bash
+streamlit run streamlit_app.py
+```
+
+---
+
+## 📂 Project Structure
+
+```bash
+netmon01/
+├── main.py                   # Core packet capture script
+├── streamlit_app.py          # Streamlit dashboard for logs
+├── requirements.txt          # Dependency file
+├── README.md                 # This file
+├── docs/
+│   ├── logs_*.txt            # Timestamped packet logs
+│   └── screenshots/          # Screenshots for README/docs
+└── venv/                     # Python virtual environment (not pushed)
+```
+
+---
+
+## 🧪 How to Test
+
+1. Launch packet capture: `sudo python3 main.py`
+2. Open another terminal and run: `ping novatitan.net`
+3. Check logs in the `docs/` folder for new entries.
+
+---
+
+## 🔐 License
+
+This project is open-source under the [MIT License](LICENSE).
+
+---
+
+## ✍️ Author
+
+**Traivone Smith**  
+Computer Science + Information Security Major  
+Aspiring Cloud & ICS Cybersecurity Specialist  
+GitHub: [@tzsmit](https://github.com/tzsmit)
