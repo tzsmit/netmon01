@@ -17,10 +17,6 @@
 - Log traffic to a timestamped log file
 - Work inside isolated Python environments for safe, portable development
 
-## 🧠 Overview
-
-`netmon01` is a lightweight, Python-based network monitoring tool built with **PyShark**. It captures live packets, logs traffic details, and flags potentially suspicious activity (e.g., use of insecure Telnet protocols). This project is part of my **Information Security portfolio** and designed to demonstrate foundational skills in:
-
 - Packet analysis  
 - Python scripting  
 - Logging and documentation  
