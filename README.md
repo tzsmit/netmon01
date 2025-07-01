@@ -11,6 +11,14 @@
 - Virtual Environment (venv)
 - Log-based detection logic
 
+### 📸 Screenshots
+
+**Packet Capture Output:**
+![Terminal](docs/screenshots/netmon01_capture.png)
+
+**Streamlit Log Viewer:**
+![Streamlit](docs/screenshots/Screenshot from 2025-07-01 12-02-28.png)
+
 ## 🎯 Learning Objectives
 - Learn to sniff live network packets using Python
 - Identify suspicious activity such as Telnet usage (port 23)
