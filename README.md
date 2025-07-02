@@ -1,5 +1,8 @@
-
 # 🛡️ netmon01 – Home Network Threat Monitor
+
+## 🔐 License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## 📘 Project Overview
 
